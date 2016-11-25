@@ -62,7 +62,7 @@ all.entrezgene <- unique( getBM(attributes = "entrezgene",
                     values = "*", 
                     mart = mart) )
 # all_genes_diff_Treated_NonTreated   <-   unique(all.entrezgene[,1]) 
-
+ 
 # # run SPIA.
 #  setwd("/Users/benmoham/Desktop/InessBenmessaoud/pvalue_adjusted0.05_2M2/SPIA")
 # spia_result_diff_Treated_NonTreated <- spia(de= sig_genes_diff_Treated_NonTreated , 
