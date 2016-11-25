@@ -29,7 +29,7 @@ mart <- useMart("ENSEMBL_MART_ENSEMBL","hsapiens_gene_ensembl", host="www.ensemb
 eattr<-c("ensembl_gene_id","entrezgene" )
 bpres<-getBM(attributes=eattr,filters="ensembl_gene_id",values= top_Treated_NonTreated$ID,mart= mart)
 results1_Treated_NonTreated <-bpres[bpres$entrezgene!="",]
-    
+   
 res1_top_pLNcells_Hepatocytes <- sqldf("select *
               from top_Treated_NonTreated 
               LEFT OUTER JOIN   results1_Treated_NonTreated
